@@ -1,6 +1,6 @@
 <?php
 /**
- * PHP53_Sniffs_PHP_DeprecatedIniDirectivesSniff.
+ * PHP53Compat_Sniffs_PHP_DeprecatedIniDirectivesSniff.
  *
  * PHP version 5.3
  *
@@ -11,7 +11,7 @@
  */
 
 /**
- * PHP53_Sniffs_PHP_DeprecatedIniDirectivesSniff.
+ * PHP53Compat_Sniffs_PHP_DeprecatedIniDirectivesSniff.
  *
  * Discourages the use of ini directives through ini_set or
  * in php.ini (searches only for the current running one, so it should be run on a php.ini
@@ -22,7 +22,7 @@
  * @author    Wim Godden <wim.godden@cu.be>
  * @copyright 2010 Cu.be Solutions bvba
  */
-class PHP53_Sniffs_PHP_DeprecatedIniDirectivesSniff implements PHP_CodeSniffer_Sniff
+class PHP53Compat_Sniffs_PHP_DeprecatedIniDirectivesSniff implements PHP_CodeSniffer_Sniff
 {
     /**
      * Variable keeps status of php.ini check

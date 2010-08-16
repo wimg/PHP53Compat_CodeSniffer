@@ -1,6 +1,6 @@
 <?php
 /**
- * PHP53_Sniffs_PHP_RemovedExtensionsSniff.
+ * PHP53Compat_Sniffs_PHP_RemovedExtensionsSniff.
  *
  * PHP version 5.3
  *
@@ -11,7 +11,7 @@
  */
 
 /**
- * PHP53_Sniffs_PHP_RemovedExtensionsSniff.
+ * PHP53Compat_Sniffs_PHP_RemovedExtensionsSniff.
  *
  * Discourages the use of removed extensions. Suggests alternative extensions if available
  *
@@ -20,7 +20,7 @@
  * @author    Wim Godden <wim.godden@cu.be>
  * @copyright 2010 Cu.be Solutions bvba
  */
-class PHP53_Sniffs_PHP_RemovedExtensionsSniff implements PHP_CodeSniffer_Sniff
+class PHP53Compat_Sniffs_PHP_RemovedExtensionsSniff implements PHP_CodeSniffer_Sniff
 {
 
     /**

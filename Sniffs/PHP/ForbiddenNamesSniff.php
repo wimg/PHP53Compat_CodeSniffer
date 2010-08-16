@@ -1,6 +1,6 @@
 <?php
 /**
- * PHP53_Sniffs_PHP_ForbiddenNamesSniff.
+ * PHP53Compat_Sniffs_PHP_ForbiddenNamesSniff.
  *
  * PHP version 5.3
  *
@@ -11,7 +11,7 @@
  */
 
 /**
- * PHP53_Sniffs_PHP_ForbiddenNamesSniff.
+ * PHP53Compat_Sniffs_PHP_ForbiddenNamesSniff.
  *
  * Prohibits the use of reserved keywords as class, function, namespace or constant names
  *
@@ -22,7 +22,7 @@
  * @author    Wim Godden <wim.godden@cu.be>
  * @copyright 2010 Cu.be Solutions bvba
  */
-class PHP53_Sniffs_PHP_ForbiddenNamesSniff implements PHP_CodeSniffer_Sniff
+class PHP53Compat_Sniffs_PHP_ForbiddenNamesSniff implements PHP_CodeSniffer_Sniff
 {
 
     /**

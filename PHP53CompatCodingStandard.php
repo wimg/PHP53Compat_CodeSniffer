@@ -1,6 +1,6 @@
 <?php
 /**
- * PHP53 PHP_CodeSniffer Coding Standard.
+ * PHP53Compat PHP_CodeSniffer Coding Standard.
  *
  * PHP version 5.3
  *
@@ -17,11 +17,11 @@ if (class_exists('PHP_CodeSniffer_Standards_CodingStandard', true) === false) {
 }
 
 if (version_compare(PHP_VERSION, '5.3.0', '<')) {
-    throw new PHP_CodeSniffer_Exception('PHP 5.3 is required to use the PHP53 codesniffer standard');
+    throw new PHP_CodeSniffer_Exception('PHP 5.3 is required to use the PHP53Compat codesniffer standard');
 }
 
 /**
- * PHP53 PHP_CodeSniffer Coding Standard.
+ * PHP53Compat PHP_CodeSniffer Coding Standard.
  *
  * @category  PHP
  * @package   PHP53Compat
@@ -31,7 +31,7 @@ if (version_compare(PHP_VERSION, '5.3.0', '<')) {
  * @version   1.0
  * @link      http://pear.php.net/package/PHP_CodeSniffer
  */
-class PHP_CodeSniffer_Standards_PHP53_PHP53CodingStandard extends PHP_CodeSniffer_Standards_CodingStandard
+class PHP_CodeSniffer_Standards_PHP53Compat_PHP53CompatCodingStandard extends PHP_CodeSniffer_Standards_CodingStandard
 {
 
 
