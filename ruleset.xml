@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ruleset name="PHP53Compat_CodeSniffer">
- <description>The PHP53Compat_CodeSniffer rules check PHP 5.3 compatibility of your code.</description>
 
+<ruleset name="PHP53Compatibility_CodeSniffer">
+ <description>Coding Standard that checks for PHP 5.3 compatibility.</description>
 </ruleset>
