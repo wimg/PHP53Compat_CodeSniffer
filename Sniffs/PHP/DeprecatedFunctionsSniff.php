@@ -57,6 +57,6 @@ class PHP53Compat_Sniffs_PHP_DeprecatedFunctionsSniff extends Generic_Sniffs_PHP
      *
      * @var bool
      */
-    protected $error = false;
+    public $error = false;
 
 }//end class
