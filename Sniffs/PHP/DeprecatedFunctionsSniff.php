@@ -1,6 +1,6 @@
 <?php
 /**
- * PHP53Compat_Sniffs_PHP_DeprecatedFunctionsSniff.
+ * PHP53Compatibility_Sniffs_PHP_DeprecatedFunctionsSniff.
  *
  * PHP version 5.3
  *
@@ -11,7 +11,7 @@
  */
 
 /**
- * PHP53Compat_Sniffs_PHP_DeprecatedFunctionsSniff.
+ * PHP53Compatibility_Sniffs_PHP_DeprecatedFunctionsSniff.
  *
  * @category  PHP
  * @package   PHP53Compat
@@ -19,7 +19,7 @@
  * @version   1.0.0
  * @copyright 2010 Cu.be Solutions bvba
  */
-class PHP53Compat_Sniffs_PHP_DeprecatedFunctionsSniff extends Generic_Sniffs_PHP_ForbiddenFunctionsSniff
+class PHP53Compatibility_Sniffs_PHP_DeprecatedFunctionsSniff extends Generic_Sniffs_PHP_ForbiddenFunctionsSniff
 {
 
     /**

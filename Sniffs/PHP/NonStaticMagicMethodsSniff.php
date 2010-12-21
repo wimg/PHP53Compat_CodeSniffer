@@ -1,6 +1,6 @@
 <?php
 /**
- * PHP53Compat_Sniffs_PHP_NonStaticMagicMethodsSniff.
+ * PHP53Compatibility_Sniffs_PHP_NonStaticMagicMethodsSniff.
  *
  * PHP version 5.3
  *
@@ -11,7 +11,7 @@
  */
 
 /**
- * PHP53Compat_Sniffs_PHP_NonStaticMagicMethodsSniff.
+ * PHP53Compatibility_Sniffs_PHP_NonStaticMagicMethodsSniff.
  *
  * Prohibits the use of static magic methods as well as protected or private magic methods
  *
@@ -20,7 +20,7 @@
  * @author    Wim Godden <wim.godden@cu.be>
  * @copyright 2010 Cu.be Solutions bvba
  */
-class PHP53Compat_Sniffs_PHP_NonStaticMagicMethodsSniff implements PHP_CodeSniffer_Sniff
+class PHP53Compatibility_Sniffs_PHP_NonStaticMagicMethodsSniff implements PHP_CodeSniffer_Sniff
 {
 
     /**
