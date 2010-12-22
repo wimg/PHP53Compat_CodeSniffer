@@ -75,7 +75,7 @@ class PHP53Compatibility_Sniffs_PHP_DeprecatedIniDirectivesSniff implements PHP_
         }
 
         $function = strtolower($tokens[$stackPtr]['content']);
-        if ($function != 'ini_set') {
+        if ($function != 'ini_get' && $function != 'ini_set') {
             return;
         }
         $iniToken = $phpcsFile->findNext(T_CONSTANT_ENCAPSED_STRING, $stackPtr, null);
