@@ -13,9 +13,7 @@
 /**
  * PHP53Compatibility_Sniffs_PHP_DeprecatedIniDirectivesSniff.
  *
- * Discourages the use of ini directives through ini_set or
- * in php.ini (searches only for the current running one, so it should be run on a php.ini
- * identical to the one running on your production server)
+ * Discourages the use of deprecated INI directives through ini_set().
  *
  * @category  PHP
  * @package   PHP53Compat
@@ -24,13 +22,6 @@
  */
 class PHP53Compatibility_Sniffs_PHP_DeprecatedIniDirectivesSniff implements PHP_CodeSniffer_Sniff
 {
-    /**
-     * Variable keeps status of php.ini check
-     *
-     * @var bool
-     */
-    protected $checkedIniFile = false;
-
     /**
      * A list of deprecated INI directives
      *
@@ -47,22 +38,6 @@ class PHP53Compatibility_Sniffs_PHP_DeprecatedIniDirectivesSniff implements PHP_
     );
 
     /**
-     * Checks if deprecated php.ini directives are present in the currently loaded php.ini
-     *
-     * @param PHP_CodeSniffer_File $phpcsFile The currently loaded file
-     */
-    protected function checkLoadedIniFile($phpcsFile)
-    {
-        $this->checkedIniFile = true;
-        foreach ($this->deprecatedIniDirectives as $directive) {
-            if (ini_get($directive) != '') {
-                $error = "The use of directive " . $directive . " in your php.ini file is discouraged";
-                $phpcsFile->addWarning($error, 0);
-            }
-        }
-    }
-
-    /**
      * Returns an array of tokens this test wants to listen for.
      *
      * @return array
@@ -72,7 +47,6 @@ class PHP53Compatibility_Sniffs_PHP_DeprecatedIniDirectivesSniff implements PHP_
         return array(T_STRING);
 
     }//end register()
-
 
     /**
      * Processes this test, when one of its tokens is encountered.
@@ -85,10 +59,6 @@ class PHP53Compatibility_Sniffs_PHP_DeprecatedIniDirectivesSniff implements PHP_
      */
     public function process(PHP_CodeSniffer_File $phpcsFile, $stackPtr)
     {
-        if ($this->checkedIniFile === false) {
-            $this->checkLoadedIniFile($phpcsFile);
-        }
-
         $tokens = $phpcsFile->getTokens();
 
         $ignore = array(
@@ -112,7 +82,7 @@ class PHP53Compatibility_Sniffs_PHP_DeprecatedIniDirectivesSniff implements PHP_
         if (in_array(str_replace("'", "", $tokens[$iniToken]['content']), $this->deprecatedIniDirectives) === false) {
             return;
         }
-        $error = "The use of ini directive " . $tokens[$iniToken]['content'] . " is discouraged";
+        $error = "INI directive " . $tokens[$iniToken]['content'] . " is deprecated.";
 
         $phpcsFile->addWarning($error, $stackPtr);
 
