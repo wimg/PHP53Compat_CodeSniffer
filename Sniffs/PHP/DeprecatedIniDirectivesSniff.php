@@ -5,7 +5,7 @@
  * PHP version 5.3
  *
  * @category  PHP
- * @package   PHP53Compat
+ * @package   PHP53Compatibility
  * @author    Wim Godden <wim.godden@cu.be>
  * @copyright 2010 Cu.be Solutions bvba
  */
@@ -13,10 +13,10 @@
 /**
  * PHP53Compatibility_Sniffs_PHP_DeprecatedIniDirectivesSniff.
  *
- * Discourages the use of deprecated INI directives through ini_set().
+ * Discourages the use of deprecated INI directives through ini_set() or ini_get().
  *
  * @category  PHP
- * @package   PHP53Compat
+ * @package   PHP53Compatibility
  * @author    Wim Godden <wim.godden@cu.be>
  * @copyright 2010 Cu.be Solutions bvba
  */

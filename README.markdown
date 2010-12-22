@@ -7,6 +7,7 @@ Installation
 ------------
 
 * Install [PHP_CodeSniffer](http://pear.php.net/PHP_CodeSniffer) with `pear install PHP_CodeSniffer` (PHP_CodeSniffer 1.3 or later is required).
+  If pear installs PHP_CodeSniffer 1.2.x, use `pear install PHP_CodeSniffer-alpha`
 * Checkout this repository as `PHP53Compatibility` into the `PHP/CodeSniffer/Standards` directory.
 * Use the coding standard with `phpcs --standard=PHP53Compatibility`.
 

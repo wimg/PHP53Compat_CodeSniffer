@@ -5,7 +5,7 @@
  * PHP version 5.3
  *
  * @category  PHP
- * @package   PHP53Compat
+ * @package   PHP53Compatibility
  * @author    Wim Godden <wim.godden@cu.be>
  * @copyright 2010 Cu.be Solutions bvba
  */
@@ -16,7 +16,7 @@
  * Prohibits the use of static magic methods as well as protected or private magic methods
  *
  * @category  PHP
- * @package   PHP53Compat
+ * @package   PHP53Compatibility
  * @author    Wim Godden <wim.godden@cu.be>
  * @copyright 2010 Cu.be Solutions bvba
  */
