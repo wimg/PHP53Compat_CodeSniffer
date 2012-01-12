@@ -52,7 +52,7 @@ class PHP53Compatibility_Sniffs_PHP_ForbiddenNamesSniff implements PHP_CodeSniff
         'endfor' => 'all',
         'endforeach' => 'all',
         'endif' => 'all',
-        'endswith' => 'all',
+        'endswitch' => 'all',
         'endwhile' => 'all',
         'extends' => 'all',
         'final' => '5.0',
