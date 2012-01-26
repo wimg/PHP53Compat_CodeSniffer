@@ -107,6 +107,11 @@ class PHP53Compatibility_Sniffs_PHP_RemovedExtensionsSniff implements PHP_CodeSn
             return;
         }
 
+        if ( $tokens[$previous]['code'] === T_OBJECT_OPERATOR ) {
+            // We are calling a method of an object
+            return;
+        }
+
         foreach ($this->removedExtensions as $extension => $alternative) {
             if (strpos($tokens[$stackPtr]['content'], $extension) === 0) {
                 if (!is_null($alternative)) {
