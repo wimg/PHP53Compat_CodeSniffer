@@ -73,14 +73,14 @@ class PHP53Compatibility_Sniffs_PHP_NonStaticMagicMethodsSniff implements PHP_Co
             return;
         }
         if ($tokens[$scopeToken]['type'] != 'T_PUBLIC') {
-            $error = "Magic methods must be public (since PHP 5.3) !";
+            $error = "[PHP 5.3] Magic methods must be public (since PHP 5.3) !";
             $phpcsFile->addError($error, $stackPtr);
         }
         $staticToken = $phpcsFile->findPrevious(T_STATIC, $scopeToken, $scopeToken - 2);
         if ($staticToken === false) {
             return;
         } else {
-            $error = "Magic methods can not be static (since PHP 5.3) !";
+            $error = "[PHP 5.3] Magic methods can not be static (since PHP 5.3) !";
             $phpcsFile->addError($error, $stackPtr);
         }
 

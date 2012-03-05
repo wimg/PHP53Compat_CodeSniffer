@@ -115,9 +115,9 @@ class PHP53Compatibility_Sniffs_PHP_RemovedExtensionsSniff implements PHP_CodeSn
         foreach ($this->removedExtensions as $extension => $alternative) {
             if (strpos($tokens[$stackPtr]['content'], $extension) === 0) {
                 if (!is_null($alternative)) {
-                    $error = "Extension '" . $extension . "' is not available in PHP 5.3 - use the '" . $alternative . "' extension instead";
+                    $error = "[PHP 5.3] Extension '" . $extension . "' is not available in PHP 5.3 - use the '" . $alternative . "' extension instead";
                 } else {
-                    $error = "Extension '" . $extension . "' is not available in PHP 5.3 anymore";
+                    $error = "[PHP 5.3] Extension '" . $extension . "' is not available in PHP 5.3 anymore";
                 }
                 $phpcsFile->addError($error, $stackPtr);
             }
