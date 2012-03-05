@@ -146,7 +146,7 @@ class PHP53Compatibility_Sniffs_PHP_ForbiddenNamesSniff implements PHP_CodeSniff
         if (in_array(strtolower($tokens[$stackPtr + 2]['content']), array_keys($this->invalidNames)) === false) {
             return;
         }
-        $error = "Function name, class name, namespace name or constant name can not be reserved keyword '" . $tokens[$stackPtr + 2]['content'] . "' (since version " . $this->invalidNames[strtolower($tokens[$stackPtr + 2]['content'])] . ")";
+        $error = "[PHP 5.3] Function name, class name, namespace name or constant name can not be reserved keyword '" . $tokens[$stackPtr + 2]['content'] . "' (since version " . $this->invalidNames[strtolower($tokens[$stackPtr + 2]['content'])] . ")";
         $phpcsFile->addError($error, $stackPtr);
 
     }//end process()
@@ -181,7 +181,7 @@ class PHP53Compatibility_Sniffs_PHP_ForbiddenNamesSniff implements PHP_CodeSniff
 
         foreach ($this->invalidNames as $key => $value) {
             if (substr(strtolower($tokens[$defineContent]['content']), 1, strlen($tokens[$defineContent]['content']) - 2) == $key) {
-                $error = "Function name, class name, namespace name or constant name can not be reserved keyword '" . $key . "' (since version " . $value . ")";
+                $error = "[PHP 5.3] Function name, class name, namespace name or constant name can not be reserved keyword '" . $key . "' (since version " . $value . ")";
                 $phpcsFile->addError($error, $stackPtr);
             }
         }
