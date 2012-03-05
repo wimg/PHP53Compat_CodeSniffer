@@ -58,7 +58,7 @@ class PHP53Compatibility_Sniffs_PHP_DeprecatedNewReferenceSniff implements PHP_C
     {
         $tokens = $phpcsFile->getTokens();
         if ($tokens[$stackPtr - 1]['type'] == 'T_BITWISE_AND' || $tokens[$stackPtr - 2]['type'] == 'T_BITWISE_AND') {
-            $error = 'Assigning the return value of new by reference is deprecated in PHP 5.3';
+            $error = '[PHP 5.3] Assigning the return value of new by reference is deprecated in PHP 5.3';
             $phpcsFile->addError($error, $stackPtr);
         }
 

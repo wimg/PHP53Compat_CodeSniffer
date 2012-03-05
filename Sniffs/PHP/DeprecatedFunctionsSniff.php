@@ -59,4 +59,45 @@ class PHP53Compatibility_Sniffs_PHP_DeprecatedFunctionsSniff extends Generic_Sni
      */
     public $error = false;
 
+    /**
+     * Generates the error or warning for this sniff.
+     *
+     * @param PHP_CodeSniffer_File $phpcsFile The file being scanned.
+     * @param int                  $stackPtr  The position of the forbidden function
+     *                                        in the token array.
+     * @param string               $function  The name of the forbidden function.
+     * @param string               $pattern   The pattern used for the match.
+     *
+     * @return void
+     */
+    protected function addError($phpcsFile, $stackPtr, $function, $pattern=null)
+    {
+        $data  = array($function);
+        $error = 'The use of function %s() is ';
+        if ($this->error === true) {
+            $type   = 'Found';
+            $error .= 'forbidden';
+        } else {
+            $type   = 'Discouraged';
+            $error .= 'discouraged';
+        }
+
+        if ($pattern === null) {
+            $pattern = $function;
+        }
+
+        if ($this->forbiddenFunctions[$pattern] !== null) {
+            $type  .= 'WithAlternative';
+            $data[] = $this->forbiddenFunctions[$pattern];
+            $error .= '; use %s() instead';
+        }
+
+        if ($this->error === true) {
+            $phpcsFile->addError("[PHP 5.3] $error", $stackPtr, $type, $data);
+        } else {
+            $phpcsFile->addWarning("[PHP 5.3] $error", $stackPtr, $type, $data);
+        }
+
+    }
+
 }//end class

@@ -82,7 +82,7 @@ class PHP53Compatibility_Sniffs_PHP_DeprecatedIniDirectivesSniff implements PHP_
         if (in_array(str_replace("'", "", $tokens[$iniToken]['content']), $this->deprecatedIniDirectives) === false) {
             return;
         }
-        $error = "INI directive " . $tokens[$iniToken]['content'] . " is deprecated.";
+        $error = "[PHP 5.3] INI directive " . $tokens[$iniToken]['content'] . " is deprecated.";
 
         $phpcsFile->addWarning($error, $stackPtr);
 
