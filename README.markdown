@@ -1,3 +1,7 @@
+This version is out of date. Check http://github.com/wimg/PHPCompatibility for the new version
+
+
+
 PHP 5.3 Compatibility Coding Standard for PHP_CodeSniffer
 =========================================================
 
